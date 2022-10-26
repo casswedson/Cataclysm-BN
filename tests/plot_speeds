@@ -1,5 +1,4 @@
 #!/usr/bin/gnuplot
-
 if (!exists("input")) input='slope_vs_moves_data_mon_zombie_dog'
 
 reset
