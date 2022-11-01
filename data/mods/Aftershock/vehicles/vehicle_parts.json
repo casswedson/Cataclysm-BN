@@ -1,10 +1,7 @@
 [
   {
     "type": "vehicle_part",
-    "id": "afs_cargo_trough",
-    "copy-from": "trunk",
-    "name": { "str": "cargo trough" },
-    "categories": [ "Cargo" ],
+    "id": "afs_cargo_trough", "copy-from": "trunk", "name": { "str": "cargo trough" }, "categories": [ "Cargo" ],
     "color": "light_gray",
     "broken_color": "light_gray",
     "looks_like": "trunk",
@@ -21,18 +18,18 @@
     "description": "A piece of sheet metal welded onto a vehicle as armor.  Thin, and not as protective as proper armor, but it'll do if there's nothing else available.",
     "symbol": ")",
     "looks_like": "steel_plate",
-    "categories": [ "Hull" ],
-    "color": "light_gray",
-    "broken_symbol": ")",
-    "broken_color": "dark_gray",
-    "durability": 300,
-    "item": "sheet_metal",
-    "location": "armor",
-    "requirements": {
-      "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
-    },
+"categories": [ "Hull" ],
+"color": "light_gray",
+"broken_symbol": ")",
+"broken_color": "dark_gray",
+"durability": 300,
+"item": "sheet_metal",
+"location": "armor",
+"requirements": {
+  "install": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+  "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+  "repair": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+},
     "flags": [ "ARMOR" ],
     "breaks_into": [ { "item": "steel_chunk", "count": [ 1, 2 ] }, { "item": "scrap", "count": [ 4, 6 ] } ],
     "damage_reduction": { "all": 4 }
