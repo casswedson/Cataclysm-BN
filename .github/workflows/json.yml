@@ -1,6 +1,6 @@
 name: JSON Validation
 
-on: pull_request
+on: pull_request_target
 
 jobs:
   skip-duplicates:
@@ -31,3 +31,9 @@ jobs:
       - name: Display Corrections
         if: failure()
         run: git diff
+
+      - name: 'style reviewer / JSON'
+        uses: reviewdog/action-suggester@v1
+        if: failure()
+        with:
+          tool_name: 'JSON formatter'
