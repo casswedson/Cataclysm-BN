@@ -1,6 +1,6 @@
 name: astyle
 
-on: pull_request
+on: pull_request_target
 
 jobs:
   skip-duplicates:
@@ -23,9 +23,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v3
 
       - name: install dependencies
         run: sudo apt-get install astyle
@@ -38,3 +36,9 @@ jobs:
         run: |
           make astyle
           git diff
+
+    - name: 'suggester / astyle'
+      uses: reviewdog/action-suggester@v1
+      if: failure()
+      with:
+        tool_name: 'astyle formatter'
